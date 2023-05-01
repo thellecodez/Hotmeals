@@ -1,17 +1,20 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 
 class Delivery extends StatelessWidget {
+  const Delivery({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: DeliveryScreen(),
-    );
+    return DeliveryScreen();
   }
 }
 
 class DeliveryScreen extends StatefulWidget {
+  const DeliveryScreen({super.key});
+
   @override
-  _DeliveryScreen createState() => new _DeliveryScreen();
+  _DeliveryScreen createState() => _DeliveryScreen();
 }
 
 class _DeliveryScreen extends State<DeliveryScreen> {
@@ -25,27 +28,115 @@ class _DeliveryScreen extends State<DeliveryScreen> {
     return Material(
       child: SafeArea(
         child: Scaffold(
+          backgroundColor: const Color(0xFFffffff),
           appBar: AppBar(
-            backgroundColor: Color(0xFF1EA955),
-            leading: CircleAvatar(
-              backgroundColor: Colors.white,
-              radius: 10,
-              child: Text(
-                'SA',
-                style: TextStyle(
-                  fontSize: 10,
-                ),
-              ),
+            centerTitle: true,
+            backgroundColor: const Color(0xFFFFFFFF),
+            elevation: 0,
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back, color: Colors.black),
+              onPressed: () {},
             ),
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [],
+              children: const [
+                Text('Checkout',
+                    style: TextStyle(
+                        color: Colors.black, fontSize: 17, fontFamily: 'Inter'))
+              ],
             ),
-            actions: <Widget>[],
+            actions: const <Widget>[],
           ),
-          body: Container(
-            child: Column(children: []),
-          ),
+          body: Column(children: [
+            Padding(
+                padding: const EdgeInsets.fromLTRB(26, 0, 26, 0),
+                child: Column(children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical:
+                                  18), //apply padding horizontal or vertical only
+                          child: Text(
+                            'Delivery',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 30,
+                                fontFamily: 'Inter'),
+                          )),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text(
+                        'Address Details',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 17,
+                            fontFamily: 'Inter'),
+                      ),
+                      Text(
+                        'Change',
+                        style: TextStyle(
+                            color: Color(0xFFF5440C),
+                            fontSize: 17,
+                            fontFamily: 'Inter'),
+                      ),
+                    ],
+                  ),
+                  Center(
+                      child: Container(
+                    margin: EdgeInsets.fromLTRB(0, 32, 0, 6),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.black,
+                          blurRadius: 10,
+                          offset: Offset(1, 3), // Shadow position
+                        ),
+                      ],
+                    ),
+                    child: Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: const [
+                                Text(
+                                  'Trinity hostel',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 17,
+                                      fontFamily: 'Inter'),
+                                ),
+                                Text(
+                                  'Icon',
+                                  style: TextStyle(
+                                      color: Color(0xFFF5440C),
+                                      fontSize: 17,
+                                      fontFamily: 'Inter'),
+                                ),
+                              ],
+                            ),
+                            const Padding(
+                                padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                child: Center(
+                                    child: Divider(
+                                  height: 0,
+                                  thickness: 1,
+                                  endIndent: 0,
+                                  color: Color(0xffADADAF),
+                                )))
+                          ],
+                        )),
+                  ))
+                ])),
+          ]),
         ),
       ),
     );
