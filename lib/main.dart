@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: "onboarding",
         routes: {
-          "onboarding": (BuildContext context) => Delivery(),
+          "onboarding": (BuildContext context) => const Delivery(),
         },
         home: const SafeArea(
           child: Scaffold(),

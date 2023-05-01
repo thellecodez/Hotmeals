@@ -87,53 +87,133 @@ class _DeliveryScreen extends State<DeliveryScreen> {
                     ],
                   ),
                   Center(
-                      child: Container(
-                    margin: EdgeInsets.fromLTRB(0, 32, 0, 6),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.black,
-                          blurRadius: 10,
-                          offset: Offset(1, 3), // Shadow position
+                      child: Column(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.fromLTRB(0, 32, 0, 6),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black,
+                              blurRadius: 0.2,
+                              offset: Offset(0.5, 0.5), // Shadow position
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                    child: Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text(
-                                  'Trinity hostel',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 17,
-                                      fontFamily: 'Inter'),
+                        child: Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text(
+                                      'Trinity hostel',
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 17,
+                                          fontFamily: 'Inter'),
+                                    ),
+                                    Text(
+                                      'Icon',
+                                      style: TextStyle(
+                                          color: Color(0xFFF5440C),
+                                          fontSize: 17,
+                                          fontFamily: 'Inter'),
+                                    ),
+                                  ],
                                 ),
-                                Text(
-                                  'Icon',
-                                  style: TextStyle(
-                                      color: Color(0xFFF5440C),
-                                      fontSize: 17,
-                                      fontFamily: 'Inter'),
+                                const Padding(
+                                    padding: EdgeInsets.fromLTRB(0, 30, 0, 30),
+                                    child: Center(
+                                        child: Divider(
+                                      height: 0,
+                                      thickness: 1,
+                                      endIndent: 0,
+                                      color: Color(0xffADADAF),
+                                    ))),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text(
+                                      'Trinity hostel',
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 17,
+                                          fontFamily: 'Inter'),
+                                    ),
+                                    Text(
+                                      'Icon',
+                                      style: TextStyle(
+                                          color: Color(0xFFF5440C),
+                                          fontSize: 17,
+                                          fontFamily: 'Inter'),
+                                    ),
+                                  ],
                                 ),
                               ],
+                            )),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(20),
+                        child: Container(),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          Text(
+                            'Delivery Method',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 17,
+                                fontFamily: 'Inter'),
+                          )
+                        ],
+                      ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(0, 5, 0, 10),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black,
+                              blurRadius: 0.2,
+                              offset: Offset(0.5, 0.5), // Shadow position
                             ),
-                            const Padding(
-                                padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
-                                child: Center(
-                                    child: Divider(
-                                  height: 0,
-                                  thickness: 1,
-                                  endIndent: 0,
-                                  color: Color(0xffADADAF),
-                                )))
                           ],
-                        )),
+                        ),
+                        child: Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [],
+                                ),
+                                const Padding(
+                                    padding: EdgeInsets.fromLTRB(0, 30, 0, 30),
+                                    child: Center(
+                                        child: Divider(
+                                      height: 0,
+                                      thickness: 1,
+                                      endIndent: 0,
+                                      color: Color(0xffADADAF),
+                                    ))),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [],
+                                ),
+                              ],
+                            )),
+                      )
+                    ],
                   ))
                 ])),
           ]),
