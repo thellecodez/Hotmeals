@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: "card",
         routes: {
-          "onboarding": (BuildContext context) => const Delivery(),
+          "delivery": (BuildContext context) => const Delivery(),
           "payment": (BuildContext context) => const Payment(),
           "card": (BuildContext context) => const CardPayment(),
         },
