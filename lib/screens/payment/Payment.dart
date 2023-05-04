@@ -31,23 +31,16 @@ class _PaymentState extends State<Payment> {
           child: Scaffold(
         backgroundColor: const Color(0xFFFFFFFF),
         appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: const Color(0xFFFFFFFF),
-          elevation: 0,
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back, color: Colors.black),
-            onPressed: () {},
-          ),
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text('Checkout',
-                  style: TextStyle(
-                      color: Colors.black, fontSize: 17, fontFamily: 'Inter'))
-            ],
-          ),
-          actions: const <Widget>[],
-        ),
+            centerTitle: true,
+            backgroundColor: const Color(0xFFFFFFFF),
+            elevation: 0,
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back, color: Colors.black),
+              onPressed: () {},
+            ),
+            title: const Text('Checkout',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 17, fontFamily: 'Inter'))),
         body: Column(children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(34, 0, 34, 0),
@@ -83,11 +76,14 @@ class _PaymentState extends State<Payment> {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20),
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 0.2,
-                        offset: Offset(0.5, 0.5), // Shadow position
+                        color: Colors.grey.withOpacity(
+                            0.3), // use a grey color with some opacity
+                        blurRadius: 6,
+                        offset: const Offset(0, 3), // add some vertical offset
+                        spreadRadius:
+                            0.1, // add a slight spread radius to the shadow
                       ),
                     ],
                   ),
