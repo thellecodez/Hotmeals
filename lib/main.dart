@@ -22,27 +22,22 @@ class MyApp extends StatelessWidget {
       statusBarIconBrightness: Brightness.light,
     ));
 
-    return const MaterialApp(
-      home: SplashScreen(),
-    );
+    return MaterialApp(
+        title: 'Hotmeals',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        initialRoute: "splashscreen",
+        routes: {
+          "splashscreen": (BuildContext context) => const SplashScreen(),
+          "delivery": (BuildContext context) => const Delivery(),
+          "payment": (BuildContext context) => const Payment(),
+          "card": (BuildContext context) => const CardPayment(),
+          "cart": (BuildContext context) => const Cart(),
+        },
+        home: const SafeArea(
+          child: Scaffold(),
+        ));
   }
-  // Widget build(BuildContext context) {
-  //   return MaterialApp(
-  //       title: 'Hotmeals',
-  //       theme: ThemeData(
-  //         primarySwatch: Colors.blue,
-  //         visualDensity: VisualDensity.adaptivePlatformDensity,
-  //       ),
-  //       initialRoute: "splashscreen",
-  //       routes: {
-  //         "splashscreen": (BuildContext context) => const SplashScreen(),
-  //         "delivery": (BuildContext context) => const Delivery(),
-  //         "payment": (BuildContext context) => const Payment(),
-  //         "card": (BuildContext context) => const CardPayment(),
-  //         "cart": (BuildContext context) => const Cart(),
-  //       },
-  //       home: const SafeArea(
-  //         child: Scaffold(),
-  //       ));
-  // }
 }
