@@ -1,6 +1,6 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:hotmeals/screens/home/HomeScreen.dart';
+import 'package:hotmeals/screens/auth/Login.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const HomeScreen()),
+        MaterialPageRoute(builder: (context) => const Login()),
       );
     });
   }
@@ -25,14 +25,25 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, // set background color
+      backgroundColor: const Color(0xff65719D), // set background color
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            SizedBox(height: 16.0), // add space between logo and text
-            Text(
-              'Welcome to my app!', // add your own welcome message
+          children: [
+            SizedBox(
+              height: 190,
+              child: Container(
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/plate.png'),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 16.0), // add space between logo and text
+            const Text(
+              'Hot meals', // add your own welcome message
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 20.0,

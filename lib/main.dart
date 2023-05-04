@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       statusBarIconBrightness: Brightness.light,
     ));
 
-    return MaterialApp(
+    return const MaterialApp(
       home: SplashScreen(),
     );
   }
