@@ -5,14 +5,13 @@ import 'package:hotmeals/screens/order/Delivery.dart';
 import 'package:hotmeals/screens/payment/CardPayment.dart';
 import 'package:hotmeals/screens/payment/Cart.dart';
 import 'package:hotmeals/screens/payment/Payment.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 Future<void> main() async {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

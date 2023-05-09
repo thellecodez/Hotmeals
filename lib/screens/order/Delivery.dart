@@ -4,7 +4,7 @@
 import 'package:flutter/material.dart';
 
 class Delivery extends StatelessWidget {
-  const Delivery({super.key});
+  const Delivery({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class Delivery extends StatelessWidget {
 }
 
 class DeliveryScreen extends StatefulWidget {
-  const DeliveryScreen({super.key});
+  const DeliveryScreen({Key? key}) : super(key: key);
 
   @override
   _DeliveryScreen createState() => _DeliveryScreen();

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hotmeals/screens/auth/Login.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
