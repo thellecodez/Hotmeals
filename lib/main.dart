@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         initialRoute: "splashscreen",
+        debugShowCheckedModeBanner: false,
         routes: {
           "splashscreen": (BuildContext context) => const SplashScreen(),
           "delivery": (BuildContext context) => const Delivery(),
